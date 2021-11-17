@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(165, 42, 42);
+            color: rgb(226, 212, 218);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript. </p>
+    <div id='n'>Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] // consulta por TAGs (Plural), sendo necesssário expecificar o número do elemento[], pois existe mais de um p e o comando é no plural. 
+        var corpo = window.document.body
+        p1.style.color = 'yellow'
+        window.document.write('Esta escrito assim: ' + p1.innerText) // innerText = exibir o Texto contido em p1 (p1 tem uma ligação criada na linha 23)
+        corpo.style.backgroundColor = 'Black'
+        corpo.style.font = 'normal 20pt Arial' // por meio do . é possivel acessar qualquer elemento dentro de window w fazer alterações no mesmo. O caminho do acesso ficará associado a uma variavel.
+    //================Cosulta resumida e por ID ==============
+        
+        n.innerText = 'Alterei o conteudo.'  // criei um id na linha 21 e com isso, posso fazer as alterações diretas em cima dele. (Aletração por comando HTML)
+        n.style.color = 'Blue'
+
+
+        var d = window.document.getElementById('n')
+        d.style.backgroundColor = 'White' // também podemos usar esse metodo. 
+
+    //================Cosulta por seletor ==============
+        var e = window.document.querySelector('div#n')//querySelectorAll > em caso de mais de um item  - acrescentar . quando for por class e não id.
+        e.style.font = 'normal 30pt Arial'
+        
+       
+
+
+    </script>
+
+
+
+</body>
+</html>

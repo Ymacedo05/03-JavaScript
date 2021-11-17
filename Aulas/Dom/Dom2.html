@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+
+    div#a {
+        background-color: cadetblue;
+        color:rgb(177, 27, 27);
+        font: normal 23pt Arial;
+        width: 200px; /* largura*/
+        
+        height: 200px;/* altura*/
+        line-height: 200px;/* */
+        text-align: center;/* */
+    }
+</style>
+</head>
+<body>
+
+    <div id='a'>Clique aqui</div>
+    
+
+<script>
+    var b = window.document.getElementById('a')
+    b.addEventListener('click', clicar)
+    b.addEventListener('mouseenter', Entrar)
+    b.addEventListener('mouseout', Sair)
+    
+
+
+    function clicar() {
+        a.innerText = 'Clicou!'
+        a.style.color ='Yellow'
+    }
+    function Entrar() {
+        a.innerText = 'Entrou!'
+        a.style.color ='Blue'
+    }
+    function Sair() {
+        a.innerText = 'Saiu!'
+        a.style.color ='Red'
+    }
+</script>
+
+    
+    
+</body>
+</html>

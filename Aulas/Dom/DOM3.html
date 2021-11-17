@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM Script</title>
+    <style>
+        div#a {
+            background-color: chartreuse;
+            color:cornsilk;
+            font: normal 18pt arial;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div id='a'onclick='Clicar()' onmouseenter ='Entrou()' onmouseout="Saiu()">Clique em mim</div>
+    <script>
+        var b = window.document.getElementById('a')
+        function Clicar () {
+            b.style.background= 'yellow'
+            b.innerText = 'Clicou!!'        
+        }
+        function Entrou () {
+            b.style.background= 'blue'
+            b.innerText = 'Entrou!!'        
+        }
+        function Saiu () {
+            b.style.background= 'red'
+            b.innerText = 'Saiu!!'        
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw</title>
+    <style>
+        body{
+            background-color:Black;
+            font: normal 18pt times;
+            color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+
+        var num ='' // maxímo 20
+        try
+        {
+            num = prompt("Digite um número")
+            if(num >20) {
+                throw new Error("Valor inválido") 
+                //Metodo para a criação de um erro conforme seus próprios parâmetros. 
+            }
+            document.write(`Valor inserido: ${num}`)
+        }catch(ex) // prenda o erro.
+        {
+            document.write(`[ERRO] ${ex}`)
+            console.log(`[ERRO] ${ex}`)
+        } finally {
+            console.log("Após o tratamento erro ou caso não tenha erro, isso será executado.")
+        }
+
+
+        // TRY  = observa um bloco de códigos
+        // CATCH = armazena o erro e pode lançar uma informação interna ou externa. 
+        // THROW = Lança a informação desejadadireto no console e pode criar novos erros. 
+        // FINALLY  = Dá continuação ao código independente se gerou erro ou não. 
+    </script>
+    
+</body>
+</html>

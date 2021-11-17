@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa finalizado</title>
+    <style>
+        body{
+            background-color: darkkhaki;
+            color: ghostwhite;
+            font: normal 18pt Times;
+        }
+        input {
+            font: normal 19pt Arial;
+            width: 100px; /* Largura*/
+        }
+        div#div{
+            margin-top: 20px /* espaçamento pra baixo*/
+        }
+    
+        </style>
+</head>
+<body>
+    <!-- Comandos em HTML-->
+    <h1> Somando Valores</h1>
+    <input type="number" name="tx1" id="a1"> +
+    <input type="number" name="tx2" id="a2">
+    <input type="button" value="Somar" onclick="Somar()">
+    <div id='div'> Resultado:</div>
+
+    <script>
+        function Somar(){
+            var unif = window.document.getElementById('a1')
+            var unif2 = window.document.querySelector('input#a2')
+            var res = window.document.getElementById('div')
+            var n1 = Number(unif.value)
+            var n2 = Number(unif2.value)
+            var x = n1 + n2
+            div.innerHTML = 'A soma dos valores digitados é ' + x +"."
+        }
+        // HTML { acrecentar informações a tela, como os botões para recolhimento de dados e texto}
+        // Script{ }
+    </script>
+    
+</body>
+</html>

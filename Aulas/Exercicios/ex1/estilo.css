@@ -1,0 +1,34 @@
+body{
+    background-color: rgba(59, 100, 212, 0.425);
+    font: normal 15pt arial
+}
+
+header{
+    color:rgb(241, 239, 229);
+    text-align: center; /* alinhamento do texto centro  */
+}
+
+section{
+    background: rgb(250, 250, 250);
+    border-radius: 10px;  /*  raio de arredondamento das laterais  */
+    padding: 15px;  /* espaçamento - espessura   */
+    width: 500px ; /* largura  */
+    margin: auto;  /* centralizar caixa */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.274); /* Sombra na caixa de texto - deslocamento lateral [5], deslocamento vertical [5],espalhamento [10]  */
+}
+
+div {
+    text-align: center;
+    padding: 8px; /* espaçamento */
+    margin: auto;
+}
+
+footer{
+    color:cornsilk;
+    text-align: center;/* alinhamento do texto centro  */
+    font-style: italic; /* fonte em italico  */
+}
+
+
+
+    

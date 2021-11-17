@@ -1,0 +1,33 @@
+body {
+    background-color: mediumvioletred;
+    font: normal 25pt times;
+    
+}
+
+header{
+     text-align: center;
+}
+
+section {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gainsboro;
+    background: lightpink;
+    width: 500px;
+    padding: 20px;
+    margin: auto;
+    
+}
+
+footer{
+    text-align: center;
+    color: thistle;
+    
+
+}
+select{
+    font: normal 18pt times;
+}
+input {
+    font: normal 18pt times;
+}
