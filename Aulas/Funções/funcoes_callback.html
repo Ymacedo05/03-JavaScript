@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Callback</title>
+</head>
+<body>
+    <script>
+
+        /*
+            Funções Callback são funções que são passadas como parametros dentro de outras funções para posteriormente serem chamadas e e executadas de forma interna complementando uma lógica. 
+        */
+
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+            //Logica:
+
+            if(true){
+                callbackSucesso("Funções de callback em JS", "Funções de callback são...")
+            } else {
+                callbackErro("Erro ao recuperar os dados")
+            }
+        }
+
+        var callbackSucesso = function (titulo, descricao){
+            document.write("<h1>" + titulo + "</h1>")
+            document.write("<hr />")
+            document.write("<p>" + descricao + "</p>")
+        }
+
+        var callbackErro = function(erro){
+            document.write("<p><strong>ERRO: </strong>" + erro + "</p>")
+            document.write("</br> </br>")
+        }
+
+
+    // ==============================================
+
+        function execucaoNome(valor, nome, erro){
+            if(valor >= 10){
+                nome()
+            } else{
+                erro("Parece que algo deu errado u.u")
+            }
+        }
+
+        var nome = function(){
+            var nom = prompt("Qual o seu nome?")
+            document.write("Bem vindo Sr. " + "<strong>"+ nom + "</strong>")
+        }
+
+        var erro = function(mensagem){
+            document.write("<strong>[ERRO!]</strong> : " + mensagem)
+        }
+
+    // ==============================================
+
+
+
+            
+        exibirArtigo(1, callbackSucesso, callbackErro)
+        execucaoNome(9,nome,erro)
+    </script>
+</body>
+</html>

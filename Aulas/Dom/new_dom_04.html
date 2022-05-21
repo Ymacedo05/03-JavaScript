@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dom 04</title>
+    <style>
+
+       h1{
+           text-align: center;
+       }
+
+       h1.new2{
+           font-family: 'Courier New', Courier, monospace;
+           box-shadow: 0px 0px 15px tomato;
+           transition: 1s;
+       }
+       button{
+           display: block;
+           margin: auto;
+           padding: 12px;
+           border-radius: 20px;
+           font-size: 1em;
+       }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1 id="h1" class="new1 h">Modificando a classe</h1>
+     
+    <button ondblclick="clicou()">Aplicar classe</button>
+
+    <input type="search
+    " id="ipt" onfocus="foco()" onblur="blurx()">
+
+    <script>
+
+        function clicou(){
+            /* var h1 = document.getElementById("h1")
+            h1.setAttribute("class","new") */
+
+            document.getElementById("h1").className += " new2" 
+            //Cuidado : se não colocar o espaço na nova classe, na hora de incluir a nova classe os nomes ficaram juntos criando uma classe ixexistente. 
+        }
+
+            function foco(){
+                document.getElementById("ipt").style.backgroundColor = "yellow"
+            }
+
+            function blurx(){
+
+                var l = document.getElementById("ipt")
+                
+                if(l.value.length <= 0){
+                    l.style.background = "white"
+                } else if(l.value.length < 3){
+                    l.style.background = "red"
+                } else{
+                    l.style.background = "green"
+                }
+            }
+    </script>
+</body>
+</html>

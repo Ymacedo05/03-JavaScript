@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dom 02</title>
+</head>
+<body>
+    <input
+     type="text" 
+     id="ipt1"
+     class="ipt"
+     placeholder="Digite um caracter..."
+     onkeyup="digitar()"
+     >
+
+     <br/> <br/> <br/> <hr>
+
+     <div>
+         <input
+         type="text"
+         id="ipt2"
+         class="ipt"
+         disabled
+         placeholder="Number..."
+         >
+         <input
+         type="text"
+         id="ipt3"
+         class="ipt"
+         disabled
+         placeholder="String..."
+         >
+     </div>
+     
+
+    <script>
+
+        function digitar(){
+            var caracter = document.getElementById("ipt1").value
+            document.getElementById("ipt1").value = ""
+            caracter.trim()
+
+
+
+            
+            /* if( caracter >= 0){
+                document.getElementById("ipt2").value = caracter
+                document.getElementById("ipt3").value = ""
+            } else {
+                document.getElementById("ipt3").value = caracter 
+                document.getElementById("ipt2").value = ""
+            } */
+
+            switch(caracter) {
+                case "0":
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                
+                    document.getElementById("ipt2").value = caracter
+                    document.getElementById("ipt3").value = ""
+                    break;
+
+                default:
+                    document.getElementById("ipt3").value = caracter 
+                    document.getElementById("ipt2").value = ""
+            }
+        }
+    
+
+    </script>
+</body>
+</html>

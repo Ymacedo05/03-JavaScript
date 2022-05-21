@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Mouse </title>
+</head>
+<body>
+    <div  ondblclick="clickou02()" onmouseup="inc()" onmouseover="over()"  onmouseout="out()" style="height: 200px;width:200px; border:1px solid black; border-radius: 20px;">
+         
+    </div>
+
+    <script>
+        //onclick > uma clicada
+        /* function click01(){
+            alert("Parece que você clickou em mim!")
+        } */
+
+        //ondblclick > duas clicadas
+        function clickou02(){
+            alert("Parece que você clickou 2 vezes em mim!")
+        }
+
+        //onmouseup > depois que você desapertar o mouse 
+        function inc(){
+            alert("Disparou o onmouseup")
+        }
+
+        //onmouseover > passar o mouse por cima 
+        function over(){
+            alert("Disparou o onmouseover")
+        }
+
+        //onmouseout > quando o foco do mouse sair do objeto 
+        function out(){
+            alert("Disparou o onmouseout")
+        }
+
+    </script>
+</body>
+</html>

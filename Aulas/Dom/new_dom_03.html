@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dom 02</title>
+    <style>
+
+        h1{
+            text-align: center;
+        }
+        #cont{
+            border-top: 5px dotted aqua;
+            border-bottom: 4px double aqua;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .div{
+            width: 120px;
+            height: 120px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+        #target{
+            margin: 50px 20px;
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>
+        Manipulando Estilo
+    </h1>
+
+    <div id="cont">
+
+        <div class="div d1" id="d1" onclick="vermelho()" style="background:brown ;">
+        </div>
+
+        <div class="div d2" id="d2" onclick="tomato()" style="background:tomato ;"></div>
+
+        <div class="div d3" id="d3" onclick="midnight()" style="background:midnightblue ;"></div>
+    </div>
+
+    <div id="target">
+
+    </div>
+     
+
+    <script>
+
+        function vermelho(){
+            var btn = document.getElementById("d1").style.background
+            var target = document.getElementById("target")
+            
+            target.style.background = btn
+        }
+
+        function tomato(){
+            var btn = document.getElementById("d2").style.background
+            var target = document.getElementById("target")
+            
+            target.style.background = btn
+        }
+
+        function midnight(){
+            var btn = document.getElementById("d3").style.background
+            var target = document.getElementById("target")
+            
+            target.style.background = btn
+        }
+
+    </script>
+</body>
+</html>

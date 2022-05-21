@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Teclado</title>
+</head>
+<body>
+    <div style="height: 200px;width:200px; border-radius:30px; background-color:aqua" onkeydown="teclado()">
+
+    </div>
+
+    <input type="email" style="padding:10px; border-radius:15px; margin:60px 10px" onkeypress="teclado()">
+
+    <script>
+
+        /*
+        onkeydown > Quando pressionar qualquer tecla dentro de um local que te permita digitar. 
+        [primeiro o evento, depois o comando da tecla]
+
+        onkeypress > Quando pressionar alguma tecla que corresponda algum caractere {botões de ação não fazem parte} dentro de um local que te permita digitar.
+        [primeiro o evento, depois o comando da tecla]
+
+        onkeyup > Depois que pressionar qualquer tecla dentro de um local que te permita digitar.
+        [primeiro o que foi digitado, depois o evento]
+        
+        */
+
+        function teclado() {
+            alert("Opa!!")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Formulário</title>
+</head>
+<body>
+
+    <div style="height:120px; width:220px; border-radius:20px; background:aqua;" onfocus="foco()">
+
+    </div>
+
+    <input type="email" style="padding:10px; border-radius:15px; margin:60px 10px;" onchange="foco()" >
+
+    <select onchange="change()">
+        <option value=""> --Selecione--</option>
+        <option value="1"> --Opção 01--</option>
+        <option value="2"> --Opção 02--</option>
+    </select>
+
+    <script>
+
+        /*
+        onfocus > Quando damos foco a um objeto clicando nele. 
+        [Não usar um alert pois gera um loop]
+
+        onblur > Quando perde o foco do elemento.
+
+        onchange > Quando muda de estado. 
+        [Aparentemente expecifico para select quando selecionamos algum option]
+        
+        */
+
+        function foco() {
+            document.write("Opa!!")
+        }
+        function change(){
+            console.log("Mudança detectada")
+        }
+    </script>
+</body>
+</html>

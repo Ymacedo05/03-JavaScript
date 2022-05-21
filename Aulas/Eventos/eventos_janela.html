@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Janela</title>
+</head>
+<body onscroll="size()" style="height:3000px ;">
+    <div style="height: 200px;width:200px; border-radius:30px; background-color:aqua" onkeydown="teclado()">
+
+    </div>
+
+    <input type="email" style="padding:10px; border-radius:15px; margin:60px 10px" onkeypress="teclado()">
+
+    <script>
+
+        /*
+        onresize > Executado quando existe uma alteração nas dimensões da tela.
+
+        onscroll > Executado quando movimentamos a barra de rolagem
+        
+        */
+
+        function size() {
+            console.log("Opa!!")
+        }
+    </script>
+</body>
+</html>
