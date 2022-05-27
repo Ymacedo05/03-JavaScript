@@ -5,8 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalhando com Vetores/Arrays</title>
+
+    <style>
+        #container{
+            border: 2px dashed red ;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #ipt{
+            height: 40px;
+            border-radius: 10px;
+            font-size: 1em;
+            text-indent: 20px;
+        }
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: brown;
+            color: white;
+            font-size: 1em;
+        }
+
+    </style>
 </head>
 <body>
     
+
+    <div id="container">
+        <input type="text" id="ipt" placeholder="Digite uma palavra...">
+        <button onclick="adicionar()">Adicionar</button>
+        <button onclick = "ordenar()">Ordenar</button>
+    </div>
+
+    <script>
+        var objetos = Array("Cadeira", "Impressora", "Garfo")
+
+
+        function adicionar() {
+            var n = document.getElementById("ipt").value
+
+            if ( n.length == 0 ) {
+                alert("[ERRO!] - Informe um valor válido")
+            } else if ( objetos.indexOf(n) != -1) {
+                alert(" O item Informado já encontra-se adicionado")
+            } else {
+                objetos.push(n)
+                console.log(objetos)
+                document.getElementById('ipt').value = ""
+            }
+        }
+
+
+        function ordenar() {
+            objetos.sort()
+            console.log(objetos)
+        }
+    </script>
 </body>
 </html>
