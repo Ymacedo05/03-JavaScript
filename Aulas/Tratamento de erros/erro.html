@@ -7,29 +7,33 @@
     <title>Teste try-throw</title>
     <style>
         body{
-            background-color:Black;
-            font: normal 18pt times;
-            color: lightgrey;
-        }
-        input{
-            font: normal 15pt times;
+            background-color: black;
+            color: teal;
         }
     </style>
 </head>
 <body>
-    <h1 id ="h1">Olá, Mundo!</h1>
-    <p>
-        Que tal clicar no botão abaixo:
-        <input type="button" value="Clique" id="btn" onclick="clicar()">
-    </p>
-    <div id ="div"></div>
+    
 
     <script>
 
-       document.getElementById("h1").style.color="red"
-       document.getElementById("h1").stye.fontSize="90px"
-       a.stye.font=""
+        
+        try {
+            var valor = prompt('Dite um valor igual ou abaixo de 20')
+            
+            if (valor > 20) {
+                throw new Error('Valor digitado supera o limite programado')
+            }
 
+            documente.write('Você digitou ' + valor)
+
+        } catch(erro) {
+            console.log('Erro identificado: ' + erro)
+            document.write("Identificamos um erro mas, já estamos trabalhando para corrigi-lo")
+
+        } finally {
+            
+        }
 
 
 
