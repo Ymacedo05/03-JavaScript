@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom Timing </title>
+</head>
+<body>
+    <!--
+
+        setTimeout(ação, tempo em milissegundos) >  Executa ação uma vez após o tempo informado 
+
+        clearTimeout() > elimina o comando acima se ele estiver incluso em uma variavel
+
+        setInterval(ação, tempo em milissegundos) >
+        Executa a ação após o periodo informado 
+
+        clearInterval() > elimina o comando acima se ele estiver incluso em uma variavel
+
+        
+    -->
+
+    
+    <script>
+
+        
+      setTimeout(function(){ document.write("Uma vez") }, 3000)
+    
+      var i = ['Escrevendo...', 5]
+      
+
+      var interval = setInterval(function(){ 
+        document.write('<br/>' + i) 
+        i[1] = i[1] - 1
+
+        if(i[1] == 0) {
+            clearInterval(interval)
+            /* window.location.href = "https://www.google.com" */
+        }
+        }, 3000)
+
+    </script>
+
+</body>
+</html>

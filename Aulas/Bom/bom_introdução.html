@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--
+
+    BOM > browser document model  // comandos associados ao navegador. 
+
+    Site para referências: https://www.w3schools.com/jsref/obj_window.asp
+
+
+    windown.open() > abre uma nova janela do navegador ou uma nova guia, dependendo das configurações do navegador e dos valores dos parâmetros.
+
+    close() > fecha a janela aberta pelo comando open, mas é necessário criar uma variavel para armazenar a janela aberta e então chama-la com o comando close() para fecha-la. 
+
+    window.print() > imprime a pagina 
+
+
+
+    -->
+
+    <button onclick="abrir()">Abrir janela</button>
+    <button onclick="fechar()">Fechar janela</button>
+    <button onclick="imprimir()">Imprimir pagina</button>
+    <button onclick="fechar()">Fechar janela</button>
+
+
+    <script>
+
+        var janela 
+
+        function abrir(){
+           janela = window.open('http://www.google.com', 'nova_janela', 'width=200, height=100')
+        }        
+
+        function fechar(){
+            janela.close()
+        }
+
+        function imprimir(){
+            window.print()
+        }
+    </script>
+</body>
+</html>

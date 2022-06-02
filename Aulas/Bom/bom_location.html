@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom Location </title>
+</head>
+<body>
+    <!--
+
+        location.href = " " >  redireciona a pagina para a url desejada. 
+        
+        window.location.reload() > recarrega a página
+
+        Referência: https://www.w3schools.com/jsref/prop_win_location.asp
+
+        
+    -->
+
+    <button onclick="recarregar()"> Recarregar página</button>
+    <button onclick="google()"> Acessr o google</button>
+    
+    <script>
+
+        
+        function recarregar(){
+            window.location.reload()
+        }
+
+        function google(){
+            window.location.href = "https://www.google.com"
+
+        }
+
+    </script>
+
+</body>
+</html>
