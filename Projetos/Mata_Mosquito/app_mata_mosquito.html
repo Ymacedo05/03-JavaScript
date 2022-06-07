@@ -7,6 +7,7 @@
     <title>Jogo Mata Mosquito</title>
 
     <link rel="stylesheet" href="jogo.css">
+    
 
 </head>
 <body onresize="ajustaTamanhoPalcoJogo()">
@@ -14,14 +15,31 @@
         onresize =" execultado quando a janela do navegador for redimensionada"
     -->
 
-    <img src="imagens/mosca.png" alt="" class="mosquito1">
+    <div class="painel">
+
+        <div class="vidas">
+            <img src="imagens/coracao_cheio.png" id="im1" alt="">
+            <img src="imagens/coracao_cheio.png" id="im2" alt="">
+            <img src="imagens/coracao_cheio.png" id="im3" alt="">
+            
+        </div>
+
+        <div class="cronometro">
+             Tempo restante: <span id="cronometro"></span>
+        </div>
+    </div>
+
     
+
     
     <script src="jogo.js"></script>
+
     <script>
-        setInterval(function(){
+
+         var criaMosquito = setInterval(function(){
             posicaoRandomica()
-        }, 2000)
+        }, atribuiVelocidade) 
+
     </script>
 </body>
 </html>
