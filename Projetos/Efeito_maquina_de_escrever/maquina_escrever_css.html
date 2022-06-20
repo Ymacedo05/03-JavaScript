@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid aquamarine;
+            padding: 20px;
+        }
+
+        .container h2{
+            color: aquamarine;
+            font-size: 2.5em;
+        }
+
+        .line{
+            border-right: 2px solid aquamarine;
+            color: aquamarine;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0 auto;
+            white-space: nowrap; /*O texto não se quebrará com a redução do width*/
+            overflow: hidden;
+            text-align: center;
+            font-size: 1.75rem;
+        }
+
+        .type-animation{
+            animation: cursor 0.5s steps(12) infinite normal, type 3s steps(12) 1s infinite both;
+            
+            
+        }
+
+        @keyframes type{
+            0%{
+                width:0;
+            }
+
+            100%{
+                width: 280px;
+            }
+        }
+
+        @keyframes cursor{
+            from{
+                border-right-color: aquamarine ;
+            }
+
+            to{
+                border-right-color: transparent;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="type-animation line">Olá, Mundo! </h2>
+    </div>
+
+    <!--  https://www.youtube.com/watch?v=TTeYXHk589c  -->
+</body>
+</html>

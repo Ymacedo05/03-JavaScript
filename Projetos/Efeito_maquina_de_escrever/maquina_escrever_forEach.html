@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito maquina de escrever</title>
+
+    <style>
+
+        body{
+            background-color: #23232e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #div, #text2{
+            color: lime;
+            font-size: 1.75em;
+            margin: 10px;
+        }
+
+        div:after{
+            content: '|';
+            margin-left: 1px;
+            font-size: 1.3em;
+            animation: pointer 0.7s infinite;
+        }
+
+        @keyframes pointer {
+            from{
+                opacity: 1;
+            }
+
+            to{
+                opacity: 0;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="div">Olá, Mundo!</div>
+    <div id='text2'> Olá, Seja Bem vindo! Qual o seu nome?</div>
+
+    <script>
+
+        function textWrite(n) {
+
+            var conteudo = document.querySelector(n).innerHTML.split('')
+
+
+            var n = document.querySelector(n)
+            n.innerHTML = ''
+
+
+            console.log(conteudo)
+
+            conteudo.forEach(function(letra,i){
+                setTimeout(function(){
+                    n.innerHTML += letra
+                },(100 * i))
+            })
+
+            
+        }
+
+        textWrite('#div')
+        textWrite('#text2')
+
+        
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+     // Somente para funções anonimas e nada mais é do que uma forma simplificada de se criar uma função. 
+     
+     
+  /*   
+     //Método antigo:
+     let quadrado = function(x=0) {
+        return x * x
+     }
+
+     let quadrado = (x) => {
+        return x * x
+     }
+
+     //ou
+
+     
+     let quadrado = x => x * x  // tbm chamado de retrno implicito
+
+     console.log(quadrado(10))
+
+*/
+    //Quando vamos trabalhar somente com uma variavel e utilizamos somente um linha de código podemos não incluir os parenteses, cochetes e nem solicitar o retorno.
+
+
+    let parImpar = (x) => {
+        if (x % 2 == 0) {
+            console.log(`O valor inserido é par: ${x}`)
+        } else{
+            console.log(`O valor inserido é impar: ${x}`)
+        }
+    }
+
+    // ou
+
+    let imparPar = x => x % 2 == 0? 'Par' : 'Impar'
+
+
+
+    parImpar(13)
+    console.log(imparPar(2))
+
+
+    </script>
+</body>
+</html>

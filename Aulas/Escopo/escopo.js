@@ -13,3 +13,18 @@ console.log(c)
  console.log(a)
 
  //OBS: Não é possivel chamar uma varial declarada com Let fora do seu bloco de origem. Como Var só respeitao escopo de Função a mesma pode ser chamada fora do seu bloco. 
+
+// ======================================
+
+
+const a = 10
+
+{
+    console.log(a)
+}
+
+function leitura (){
+    console.log(a)
+}
+
+leitura()
