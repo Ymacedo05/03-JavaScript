@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar - Herança</title>
+    <style>
+        body{
+            background-color: black;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            Sempre que usarmos o comando EXTENDS devemos usar o SUPER(), pois ele permite acessar o CONSTUCTOR() da classe pai, além de permitir setar valores ao mesmo.
+        */
+
+        class Animal {
+
+            constructor(cor, tamanho) {
+                this.cor = cor
+                this.tamanho = tamanho
+            }
+
+            dormir() {
+                console.log('Dormiu')
+            }
+
+            comer() {
+                console.log('Se alimentou')
+            }
+        }
+
+        class Passaro extends Animal{
+
+            constructor(cor, tamanho, bico) {
+                super(cor, tamanho)
+                this.bico = bico
+                
+            }
+
+            voar() {
+                console.log("Está voando")
+            }
+        }
+
+        class Papagaio extends Passaro {
+
+            constructor(nome,cor, tamanho, bico) {
+                super(cor, tamanho, bico)
+                this.nome = nome
+            }
+            
+
+            falar(x) {
+                console.log( this.nome + ' Falou : ' + x)
+            }
+        }
+
+
+
+
+        var passaro = new Passaro()
+        var papagaio = new Papagaio('Elvis', 'Verde', 30, 'cumprido')
+        var papagaio02 = new Papagaio('Albert','Azul', 50, 'Muito grande')
+
+        console.log(papagaio)
+        console.log(papagaio02)
+
+        papagaio02.falar('Olá')
+
+    </script>
+</body>
+</html>

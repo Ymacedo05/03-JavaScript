@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstração Prática</title>
+
+    <style>
+        body{
+            background: black;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+
+    /*
+        ENTIDADE: nome da classe > tudo deve ter ligação a algo real.
+            class -- {--}
+            
+
+        CARACTERISTICAS /MÉTODOS: valores internos
+            constructor(null) {---}
+
+
+        AÇÕES: ---
+            ação() {
+                this.cracteristica ---
+            }
+            
+
+        IDENTIDADE: criação e referênciação ao obj
+            var x = new --
+            class--
+    
+    */
+
+
+ class Carro {
+
+    constructor() {
+        this.marca = 'Ford'
+        this.modelo = 'esportivo'
+        this.qtdePortas = 4
+        this.velocidade = 0
+    }
+
+    ligar() {
+        console.log('Você ligou o carro | Velocidade atual: ' + this.velocidade + 'kh' )
+    }
+
+    acelerar(){
+        this.velocidade += 20
+        console.log('Carro aumentando a velocidade | Velocidade atual: ' + this.velocidade + 'kh')
+    }
+
+    freiar() {
+        this.velocidade = 0
+        console.log('Você parou o carro | Velocidade atual: ' + this.velocidade + 'kh')
+    }
+
+    desligar(){
+        console.log('Carro desligado')
+    }
+
+ }
+
+ var x = new Carro()
+
+ x.ligar()
+ x.acelerar()
+ x.acelerar()
+ x.acelerar()
+ x.acelerar()
+ x.acelerar()
+ x.freiar()
+ x.desligar()
+
+
+ 
+    
+    
+    
+
+            
+
+
+    </script>
+</body>
+</html>

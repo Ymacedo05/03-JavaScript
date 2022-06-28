@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+
+        // POLIMORFISMO > a opção de alterarmos uma ação ou caracteristica herdada.Para realiza-la precisamos somente sobrescrever a função ou o componente do objeto com outro retorno dentro da classe filha.
+
+        class Animal {
+
+            constructor(cor, peso, nome) {
+                this.cor = cor
+                this.peso = peso
+                this.nome = nome
+                this.bico = ''
+            }
+
+            dormir() {
+                console.log('Dormiu...')
+            }
+
+            
+        }
+
+        class Gato extends Animal {
+            constructor() {
+                super('Branco', 2, 'Gohan')
+                this.bico =' Não possuí bico'
+            }
+
+            arranhar() {
+                console.log('Arranhou tudo...')
+            }
+
+            dormir() {
+                console.log('Vive acordado')
+            }
+        }
+
+        let gato = new Gato()
+        console.log(gato)
+        console.log(gato.arranhar())
+        console.log(gato.dormir())
+
+
+
+    </script>
+    
+</body>
+</html>

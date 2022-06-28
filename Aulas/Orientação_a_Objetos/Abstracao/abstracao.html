@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradigma de Orientação a Objetos</title>
+</head>
+<body>
+    
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+
+    <script>
+
+    /*
+        ENTIDADE: nome da classe > tudo deve ter ligação a algo real.
+        CARACTERISTICAS /MÉTODOS: valores internos
+        AÇÕES: ---
+        IDENTIDADE: criação e referênciação ao obj
+    
+    */
+
+    class ContaBancaria { // Entidade
+
+        constructor() { // Caracteristicas
+            this.agencia = 1075
+            this.numeroConta = 1234567
+            this.saldo = 100
+            this.limite = 450
+        }
+
+        // Ações
+        depositar(valorDeposito) {
+            this.saldo += valorDeposito
+        }
+
+        sacar(valorSacar) {
+            this.saldo -= valorSacar
+        }
+
+        consultarSaldo() {
+            return this.saldo
+        }
+
+
+    }
+
+    //Identidade
+    var x = new ContaBancaria()
+    var y = new ContaBancaria()
+
+
+    /* console.log(x.consultarSaldo())
+    x.sacar(50)
+
+    console.log(x.consultarSaldo())
+    x.depositar(1050)
+
+    console.log(x.consultarSaldo()) */
+
+    //====================================================
+
+    class Cadeira {
+
+        constructor(qtdePernas, giratoria, cor){
+            this.pernas  = qtdePernas
+            this.giratoria = giratoria
+            this.cor = cor
+        }
+
+        girar() {
+            if(this.pernas == 1 && this.giratoria == true){
+                console.log('Girou')
+            } else {
+                console.log('OPS! Parece que sua cadeira não pode girar.')
+            }
+        }
+    }
+
+    var cadeira01 = new Cadeira(1,true, 'Marrom')
+    var cadeira02 = new Cadeira(4,false, 'green')
+    cadeira01.girar()
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

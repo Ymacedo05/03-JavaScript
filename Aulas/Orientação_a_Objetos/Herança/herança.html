@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar - Herança</title>
+    <style>
+        body{
+            background-color: black;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            Podemos atribuir caracteristicas e ações de outra classe a uma classe existente, dessaforma uma classe superior terá informações que outras subclasses especificas poderão herdar. 
+
+            Para herar as informações de uma classe superior a subclasse deve receber o comando  EXTENDS --NOME DA CLASSE SUPERIOR-- após o nome da sua classe e SUPER() antes dos THIS no constructor.
+
+
+            Lembrando que, quando uma subclasse herda alguma informação ela também pode passar essas informações para outras classes já com suas informações também inclusas criando um efeito cascata
+        */
+
+        class Animal {
+
+            constructor() {
+                this.cor = ''
+                this.tamanho =''
+            }
+
+            dormir() {
+                console.log('Dormiu')
+            }
+
+            comer() {
+                console.log('Se alimentou')
+            }
+        }
+
+        class Passaro extends Animal{
+
+            constructor() {
+                super()
+                this.bico = ''
+                
+            }
+
+            voar() {
+                console.log("Está voando")
+            }
+        }
+
+        class Papagaio extends Passaro {
+
+            constructor() {
+                super()
+            }
+
+            falar() {
+                console.log('Falou : ')
+            }
+        }
+
+        class Gato extends Animal{
+
+            constructor() {
+                super()
+                this.pelo = ''
+                this.calda = ''
+            }
+
+            arranhar() {
+                console.log('Arranhou tudo')
+            }
+
+            morder() {
+                console.log('Mordeu tudo')
+            }
+        }
+
+        var gato = new Gato()
+        var passaro = new Passaro()
+        var papagaio = new Papagaio(
+
+        )
+        console.log (gato)
+        console.log(passaro)
+        console.log(papagaio)
+
+    </script>
+</body>
+</html>

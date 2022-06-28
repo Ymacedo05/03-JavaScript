@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos literais 01</title>
+</head>
+<body>
+    <script>
+
+        // Geralmente utilizando quando não precisaremos reutilizar o código
+
+        var obj = {
+
+            descricao: 'Notebook',
+            valor: 2500,
+            info: function() {
+                console.log(`Hoje temos um ${this.descricao} por apenas ${this.valor}`)
+            }
+        }
+
+        console.log(obj)
+        obj.info()
+
+    
+    </script>
+</body>
+</html>

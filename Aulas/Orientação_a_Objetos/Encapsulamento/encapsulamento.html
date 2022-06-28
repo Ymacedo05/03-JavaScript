@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2° Pilar Encapsulamento</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+
+    
+<body>
+    <script>
+
+    // Em alguns casos quando não queremos que os atributos segem visiveis ou alterados, podemos incluir o _ na frente do nome e usar os métodos get e set para disponibilização e aletração dos mesmos.
+
+        class Tv {
+            constructor() {
+
+
+                this._disponibilidadeCanal = [2,4,5]
+                this._canalAtivo = 4
+                this._volume = 30
+            }
+
+            get canalAtivo() {
+                return this._canalAtivo
+                //função para acessar o método
+            }
+
+            get volume() {
+                return this._volume
+            }
+
+            set canalAtivo(x) {
+                
+                //etapa de segurança antes da alteração do dado
+                if(this._disponibilidadeCanal.indexOf(x) != -1) {
+                    this._canalAtivo =  x
+                }
+            }
+
+
+        }
+
+        let tv = new Tv()
+        tv.canalAtivo = 8
+        
+
+        /* console.log(tv.canalAtivo) */
+
+
+//=======================================================
+
+        class Vida {
+            
+            constructor(){
+                
+            }
+
+           
+
+
+        }
+
+        let vida = new Vida()
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
