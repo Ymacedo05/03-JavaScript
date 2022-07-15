@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Função Factory </title>
+</head>
+<body>
+    
+
+    <script>
+
+        //Função factory > método para a criação de objetos dinâmicos visando a vacilitação de requisições HTTP
+
+        let animal = function(tipo, peso) {
+
+
+            //lógica para a requisição http
+
+            return {
+                tipo,
+                peso,
+
+                acao() {
+                    console.log("Ação realizada")
+                }
+            }
+        }
+
+        let animal01 = animal('Mamifero','1 Tonelada')
+
+        animal01.acao()
+        console.log(animal01.peso)
+
+
+        let animal02 = animal('Nervoso','2 Toneladas')
+
+        animal02.acao()
+        console.log(animal02.peso)
+
+
+
+
+    </script>
+
+</body>
+</html>

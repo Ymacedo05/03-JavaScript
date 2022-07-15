@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Object</title>
+</head>
+<body>
+
+    <script>
+
+        let animais = {
+            gato02:'Zote',
+            gato02: 'Judiação Branca',
+            gato03: 'Nenezotinha',
+            especial: {
+                gatox: 'escuridão'
+            }
+        }
+
+
+
+        let { gato02, gato03} = animais
+        let { gato02: g1,gato05: g5 = 'Não localizado'} = animais 
+        let {especial: {gatox: x}} = animais
+
+
+
+        console.log(gato02, gato03)
+        console.log(g1, g5)
+        console.log(x)
+
+
+    </script>
+    
+</body>
+</html>

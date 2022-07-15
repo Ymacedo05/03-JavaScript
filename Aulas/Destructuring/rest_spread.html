@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring em Function</title>
+</head>
+<body>
+    
+    <script>
+
+
+        //REST[JUNÇÃO] COM DESTRUCTURING EM ARRAY
+        // utilizando rest em array é possível armazenar o primeiro valor em uma variavel e o restante no rest
+
+        let array = [10, 20, 30]
+
+        let [ ,a, ...res] = array
+
+        console.log(a)
+        console.log(res)
+
+
+
+
+
+        //REST[JUNÇÃO] COM DESTRUCTURING EM OBJ
+        // Já em um objeto, é possível isolar qualquer valor que o restante dos dados serão armazenados no rest. 
+
+        let obj = {a:10, b:20, c:30}
+        let {b:a1, ...rest} = obj
+
+        console.log(a1)
+        console.log(rest)
+
+
+    </script>
+</body>
+</html>

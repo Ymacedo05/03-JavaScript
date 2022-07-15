@@ -69,7 +69,7 @@ for (var c in vetor ) {
 //Difrente das demais estruturas de repetição, o FOR IN atribuí o indice do vetor a variavel declarada podendo ser qualquer tipo de valor.  
 
 
-//================ FOR IT ======================
+//================ FOR EACH ======================
 /*
 1. podemos não especificar os 3 parametos dentro da função e informar somente o que precisamos, como valor.
 

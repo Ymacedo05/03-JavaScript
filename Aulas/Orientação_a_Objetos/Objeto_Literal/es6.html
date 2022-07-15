@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Atualizações ES6 </title>
+
+    <style>
+
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+
+
+// ES5 >
+        let nome = 'Yuritan'
+        let idade = 24
+        let sexo = 'Masculino'
+        let profissão = 'Futuro programador'
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissão: profissão,
+
+            resumo: function() {
+               console.log(`${nome}, ${idade}, ${sexo}, ${profissão}.`)
+            }
+        }
+
+        console.log(objeto)
+        objeto.resumo()
+
+
+// ES6 > podemos incluir uma função sem um par e sem o termo function e quando o par for o nome e o valor de uma variavel, podemos apenas incluir a variavel que ambos os dados serão preenchidos.
+
+        let objeto2 = {
+
+            nome,
+            idade,
+            sexo,
+            profissão,
+
+            resumo() {
+                console.log(`${nome}, ${idade}, ${sexo}, ${profissão}.`)
+            }
+        }
+
+        console.log(objeto2)
+        objeto2.resumo()
+    </script>
+    
+</body>
+</html>

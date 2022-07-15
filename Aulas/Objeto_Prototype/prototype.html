@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prototype </title>
+</head>
+<body>
+
+    <script>
+        // Todo objeto descende de Object e portanto, todos os itens de object são herdados pelos seus filhos e por meio do object podemos acessar itens contidos em filhos especificos.
+
+
+        Object.prototype.atX = 'x'
+
+
+        let animal = { at1: 'a'}
+        let ave = { __proto__:animal, at2: 'b', atOBS: 'obs'}
+        let papagaio = { __proto__:ave, at3: 'c', atOBS: 'Manteve o local'}
+
+        console.log(papagaio.atX)
+
+        console.log(papagaio.at1)
+        console.log(papagaio.at2)
+
+        console.log(papagaio.at3)
+        console.log(papagaio.atOBS)
+
+
+       /*
+        __proto__ > associa um objeto a outro objeto por meio do OBJECT
+
+        Object.prototype > cria um objeto com escopo global que será herdado por qualquer objeto criado.
+
+       */
+
+       //OBS: se um dos elementos de um dos objetos herdados for igual a um dos elementos do objeto local, o local será mantido.
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Funções construtoras </title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        // CLASS 
+
+        class Veiculo {
+
+            constructor(modelo, cor, qtdRodas) {
+
+                this.modelo = modelo
+                this.cor = cor
+                this.qtdRodas = qtdRodas
+            }
+
+            resumo() {
+                console.log( ` ${this.modelo}, da cor ${this.cor}, com ${this.qtdRodas} rodas.`)
+            }
+        }
+
+        
+        //  OBJ LITERAL
+
+        let veiculo = new Veiculo('Mustang', 'Preto', 4)
+        console.log(veiculo.resumo())
+
+
+        let veiculo2 = {
+
+            modelo: 'Ferrari',
+            cor: 'Vermelha',
+            qtdRodas: 4,
+
+            resumo() {
+                console.log( ` ${this.modelo}, da cor ${this.cor}, com ${this.qtdRodas} rodas.`)
+            }
+        }
+
+        console.log(veiculo2.resumo())
+
+
+        
+
+
+        // FUNÇÃO CONSTRUTIRA DE OBJETO
+
+        let Veiculos = function(modelo, cor) {
+            
+            this.modelo = modelo
+            this.cor = cor
+
+            this.getModelo = function() {
+                return this.modelo
+            }
+
+            this.resumo = function() {
+                console.log(`Parece que você possuí uma carro em sua garagem: ${this.getModelo()}, ${this.cor}`)
+            }
+        }
+
+        let carro03 = new Veiculos('Corsa', 'Cinza')
+        carro03.resumo()
+        console.log(carro03.getModelo())
+
+
+
+
+        // FUNÇÃO CONSTRUTORA COM BLINDAGEM  > Quando substituimos o this por uma var, devido ao seu escopo, a mesma só pode ser vista ou utilizada dentro da função, tornando o conteudo privado ao invés de publico como é o caso do this.  
+
+        let Bicho = function() {
+
+            this.tipo = 'Urso'
+            var peso = '500kg'
+            
+
+            this.resumo = function() {
+                console.log(`Identificado um ${this.tipo}, com ${peso}`)
+            }
+        }
+
+        let bicho = new Bicho()
+        bicho.resumo()
+
+        console.log(bicho.tipo)
+        
+        
+        
+
+
+        
+    </script>
+</body>
+</html>

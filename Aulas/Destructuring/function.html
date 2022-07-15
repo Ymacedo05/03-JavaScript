@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring em Function</title>
+</head>
+<body>
+    
+    <script>
+
+        //Todos os recursos aprendidos anteriormente funcionam com funções: pular caractere, atribuir valor para undefined, mudar o nome das variaveis no caso de obj
+
+
+        //DESTRUCTURING ARRAY EM FUNÇÃO
+
+        let array = [10, 20, 30]
+
+        function des([a, ,b]) {
+            console.log(a,b)
+        }
+
+        des(array)
+
+
+
+        //DESTRUCTURING OBJ EM FUNÇÃO
+
+        let obj = {a:10, b:20, c:30}
+
+        function desc({a, b:x, y = '100'}) {
+            console.log(a, x, y)
+        }
+
+        desc(obj)
+    </script>
+</body>
+</html>

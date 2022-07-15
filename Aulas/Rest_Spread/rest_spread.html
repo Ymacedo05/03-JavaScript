@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Spread </title>
+</head>
+<body>
+    
+
+    <script>
+
+        /*
+        OBS> Ambos são o mesmo comando mas no contexto certo serve para espalhar dados ou junta-los
+
+        REST > junta as informações no contexto de uma função.
+
+        SPREAD > Espalha as informações, sejam string, objetos ou arrays, mas de forma diferente.
+
+        */
+
+
+        //STRING >  separa todos os caracteres
+
+        let texto = 'Olá, Mundo!'
+        let texto2 = (texto)
+        
+        console.log(texto)
+        console.log(...texto)
+
+
+        //ARRAYS / VETORES >  junta os elementos na posição desejada
+
+        let animais1 = ['Urso','Tamandua', 'pinguin']
+        let animais2 = ['Gato','Cachorro', 'Hamster']
+
+        let animais = [...animais1, ...animais2]
+
+        console.log(animais)
+
+
+        // OBJETOS > junta os elementos
+
+        let obj1 = {nome: 'larissa', idade: 28}
+        let obj2 = {cor: 'rosa', bichinho: "morticia"}
+
+        let obj = {...obj1, ...obj2}
+
+        console.log(obj)
+
+
+
+        //FUNÇÃO > podemos criar funções que trabalham com parâmetros infinitos utilizando o REST, pois ele criará uma array e incluriá todos os valores na mesma(EX1). Além disso, podemos separar parâmetros especificos e atribuimos os demais ao vetor(EX2)
+
+        //EX1
+        function soma(...x) {
+
+            let resultado = 0
+
+            x.forEach((valores) => {
+                resultado+= valores
+            })
+            console.log(`O resultado é: ${resultado}`)
+
+        }
+
+        soma(3,5,7,12)
+
+
+        //EX2
+        function soma2(y,...x) {
+
+            let resultado = 0
+
+            x.forEach((valores) => {
+                resultado+= valores
+            })
+            console.log(y)
+            console.log(`O resultado é: ${resultado}`)
+
+        }
+
+            soma2(3,5,7,12)
+
+
+
+
+
+
+    </script>
+</body>
+</html>

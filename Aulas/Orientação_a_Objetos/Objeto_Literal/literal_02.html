@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Comandos adicionais OBJ literal</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        let obj = {
+            nome: 'Suzana',
+            idade: 19,
+        }
+
+        console.log(obj)
+
+
+
+        // INCLUSÃO DE DADOS 
+
+        obj.sexo = 'Feminino'
+        console.log(obj)
+
+
+        // SOBRESCREVENDO DADOS
+
+        obj.idade = 23
+        console.log(obj)
+
+        // IMPORTANTE 
+
+        /* Quando criamos uma outra variavel e atribuimos a ela a variavel que contem o OBJ a nova variavel receberá somente uma referência do OBJ e portanto, qualquer alteração realizada na variavel antiga ou nova  resultará na mudança do OBJ em sí*/
+
+    </script>
+</body>
+</html>
